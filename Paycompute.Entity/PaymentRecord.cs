@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -11,10 +12,13 @@ namespace Paycompute.Entity
         [ForeignKey("Employee")]
         public int  EmployeeId { get; set; }
         public Employee Employee { get; set; }
+        [MaxLength(100)]
         public string FullName { get; set; }
         public string NiNo { get; set; }
         public DateTime PayDate { get; set; }
         public string PayMonth { get; set; }
+        [ForeignKey("TaxYear")]
+        public int TaxYearId { get; set; }
         public TaxYear TaxYear{ get; set; }
         public string TaxCode { get; set; }
         [Column(TypeName = "money")]

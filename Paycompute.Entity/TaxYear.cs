@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Paycompute.Entity
 {
-    class TaxYear
+    public class TaxYear
     {
+        public int Id { get; set; }
+        public string YearOfTax { get; set; }
+
     }
 }
