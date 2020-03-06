@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.1" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\Paycompute.Entity\Paycompute.Entity.csproj" />
+    <ProjectReference Include="..\Paycompute.Services\Paycompute.Services.csproj" />
+  </ItemGroup>
+
 </Project>
