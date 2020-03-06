@@ -8,9 +8,10 @@ Microsoft.EntityFrameworkCore.Tools
 
 #### Db Migration 
 
-```
-Configuration Paycompute -> AppSetting.json -> ConnectionString -> ServerName  
+
+Configuration Paycompute -> AppSetting.json -> ConnectionString -> ServerName  <br>
 Package Manager Console -> Select Paycompute.Persistence Layer -> Add this command 
+```
  Add-Migration "Initial Migration" 
  Update-database 
  ```
