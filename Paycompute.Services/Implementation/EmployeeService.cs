@@ -30,9 +30,19 @@ namespace Paycompute.Services.Implementation
             await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<Employee> GetAll()
+        public IEnumerable<Employee> GetAll() => _context.Employees.ToList();
+
+        public async Task UpdateAsync(Employee employee)
         {
-            throw new NotImplementedException();
+            _context.Update(employee);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(int id)
+        {
+            var emp = GetById(id);
+            _context.Update(emp);
+            await _context.SaveChangesAsync();
         }
 
         public decimal StudentLoanRepaymentAmount(int id, decimal totalAmount)
@@ -45,14 +55,6 @@ namespace Paycompute.Services.Implementation
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(Employee employee)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
