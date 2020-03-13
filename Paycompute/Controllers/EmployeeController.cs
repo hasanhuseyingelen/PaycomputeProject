@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Paycompute.Models;
 using Paycompute.Services;
-using Paycompute.Views;
 
 namespace Paycompute.Controllers
 {
